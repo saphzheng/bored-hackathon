@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+        <script src="./scripts/script.js" defer></script>
+        <link rel="stylesheet" href="./styles/style.css">
+        <title>Bored</title>
+    </head>
+    <body>
+        <div class="hero">
+            <img class="hero__image" src="./assets/images/bored-hero.png">
+            <div class="hero__options">
+                <a class="hero__link" href="./index.html"><h1 class="hero__option hero__option--active">Tell Me What To Do</h1></a>
+                <a class="hero__link" href="./joke.html"><h1 class="hero__option">Tell Me A Joke</h1></a>
+            </div>
+           
+        </div>
+        <main class="bored">
+            <form class="bored-form bored-form--activity">
+                <label class="bored-form__label" for="num-participants">How many people are bored</label>
+                <input class="bored-form__input bored-form__input--num" type=number name="participants" id="num-particiapnts" min="1" max="20" value="1"/>
+    
+                <!-- <label class="bored-form__label" for="activity-type">Activity type</label>
+                <select class="bored-form__input" name="activity" id="activity-type">
+                    <option value="education">Education</option>
+                    <option value="recreational">Recreational</option>
+                    <option value="social">Social</option>
+                    <option value="diy">DIY</option>
+                    <option value="charity">Charity</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="relaxation">Relaxation</option>
+                    <option value="music">Music</option>
+                    <option value="busywork">Busywork</option>
+                </select> -->
+    
+                <button class="bored-form__button button">Submit</button>
+            </form>
+            
+            
+            <div class="result">
+                <h2 class="result__text">Generating...</h2>
+                <button class="result__button--yes button">That sounds good</button>
+                <button class="result__button--no button">No I don't want to do that</button>
+            </div>
+
+            <p class="error-message">Sorry no activity found with the specified parameters. Please try again.</p>
+        
+            <div class="success">
+                <p class="success__message">Congratuations! Your boredom is cured!</p>
+            </div>
+        </main>
+    </body>
+</html>
